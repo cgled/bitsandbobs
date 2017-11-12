@@ -1,1 +1,21 @@
 <h1>Nothing to see here</h1>
+
+ <script>
+     $(document).ready(function(){
+    
+     function getValues(){
+           var result=null;
+           $.ajax({
+             url: 'http://somata.inf.ed.ac.uk/chunks/save',
+             type: 'POST',
+             dataType: 'json',
+             data: {experimentId:"meow",sessionId:"woof"},
+             cache: false,
+             success: function(resultData) {console.log("success called, result:" + resultData); if(resultData != null){ alert(resultData); } },
+             error: function(failData) {console.log("error: " + JSON.stringify(failData));}
+           });
+           return result;
+      };
+      getValues();
+     })
+     </script>
