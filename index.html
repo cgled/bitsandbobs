@@ -10,7 +10,7 @@
              type: 'POST',
              dataType: 'json',
              contentType:"application/json; charset=utf-8",
-             data: {experimentId:"meow",sessionId:"woof"},
+             data: JSON.stringify({experimentId:"meow",sessionId:"woof"}),
              cache: false,
              success: function(resultData) {console.log("success called, result:" + resultData); if(resultData != null){ alert(resultData); } },
              error: function(failData) {console.log("error: " + JSON.stringify(failData));}
