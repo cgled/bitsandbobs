@@ -8,7 +8,7 @@
            $.ajax({
              url: 'https://somata.inf.ed.ac.uk/chunks/save',
              type: 'POST',
-             dataType: 'json',
+             dataType: 'application/json',
              data: {experimentId:"meow",sessionId:"woof"},
              cache: false,
              success: function(resultData) {console.log("success called, result:" + resultData); if(resultData != null){ alert(resultData); } },
