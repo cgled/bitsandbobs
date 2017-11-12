@@ -12,7 +12,7 @@
              contentType:"application/json; charset=utf-8",
              data: JSON.stringify({experimentId:"meow",sessionId:"woof"}),
              cache: false,
-             success: function(resultData) {console.log("success called, result:" + resultData); if(resultData != null){ alert(resultData); } },
+             success: function(resultData) {console.log("success called, result:" + JSON.stringify(resultData)); if(resultData != null){ alert(JSON.stringify(resultData)); } },
              error: function(failData) {console.log("error: " + JSON.stringify(failData));}
            });
            return result;
